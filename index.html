@@ -70,6 +70,21 @@ See LICENSE for terms.
     html{scroll-behavior:auto}
     *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
   }
+  /* Sleek thin scrollbar, same pattern as sakura: slim width, pill-shaped thumb with a
+     border matching the page background (creates a floating-inset look via
+     background-clip:padding-box rather than a blocky bar), corner/buttons hidden.
+     Theme-adaptive automatically since it reads --ink-soft/--paper, which already flip
+     under prefers-color-scheme. Firefox fallback via scrollbar-width, scoped so Chromium
+     stays on the fully custom (arrow-free) ::-webkit-scrollbar path rather than switching
+     to its native Fluent renderer when both properties are present. */
+  ::-webkit-scrollbar{width:10px; height:10px}
+  ::-webkit-scrollbar-thumb{background:var(--ink-soft); border-radius:999px; border:2px solid var(--paper); background-clip:padding-box}
+  ::-webkit-scrollbar-track{background:transparent}
+  ::-webkit-scrollbar-button{display:none; width:0; height:0}
+  ::-webkit-scrollbar-corner{background:transparent}
+  @supports not selector(::-webkit-scrollbar){
+    html{scrollbar-width:thin; scrollbar-color:var(--ink-soft) transparent}
+  }
   body{
     margin:0;
     background:var(--paper);
@@ -103,7 +118,7 @@ See LICENSE for terms.
   /* ===== Header nav ===== */
   .topnav{
     position:sticky; top:0; z-index:20;
-    background:rgba(251,244,234,0.86);
+    background:color-mix(in srgb, var(--paper) 86%, transparent);
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--paper-3);
   }

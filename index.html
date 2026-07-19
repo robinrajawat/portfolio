@@ -294,7 +294,10 @@ See LICENSE for terms.
     background:var(--white); border:1px solid var(--paper-3); border-radius:var(--radius-sm);
     padding:16px 18px; display:flex; gap:12px; align-items:flex-start;
     box-shadow:0 2px 10px var(--shadow);
+    text-decoration:none; color:inherit;
+    transition:border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
   }
+  .cert-card:hover{border-color:var(--green); box-shadow:0 6px 18px var(--shadow-lg); transform:translateY(-1px);}
   .cert-icon{
     flex:0 0 auto; width:34px; height:34px; border-radius:10px;
     background:var(--gold-tint); color:#8A5D1D;
@@ -494,12 +497,12 @@ See LICENSE for terms.
       <span class="chip">SAP Fiori &amp; UI5</span>
     </div>
     <div class="cert-grid">
-      <div class="cert-card"><div class="cert-icon">✓</div><div class="cert-text"><strong>S/4HANA Sales 1909</strong>SAP Certified Application Associate</div></div>
-      <div class="cert-card"><div class="cert-icon">✓</div><div class="cert-text"><strong>S/4HANA Cloud — Sales 2021</strong>SAP Certified Application Associate</div></div>
-      <div class="cert-card"><div class="cert-icon">✓</div><div class="cert-text"><strong>Extended Warehouse Management 9.5</strong>SAP Certified Application Associate</div></div>
-      <div class="cert-card"><div class="cert-icon">✓</div><div class="cert-text"><strong>Transportation Management 9.5</strong>SAP Certified Application Associate</div></div>
-      <div class="cert-card"><div class="cert-icon">✓</div><div class="cert-text"><strong>Fiori Application Developer</strong>SAP Certified Development Associate</div></div>
-      <div class="cert-card"><div class="cert-icon">✓</div><div class="cert-text"><strong>ABAP for SAP HANA 2.0</strong>SAP Certified Development Specialist</div></div>
+      <a class="cert-card" href="https://www.credly.com/badges/3351f127-7058-4e2f-a056-4924c2d3d4f7" target="_blank" rel="noopener noreferrer"><div class="cert-icon">✓</div><div class="cert-text"><strong>S/4HANA Sales 1909</strong>SAP Certified Application Associate</div></a>
+      <a class="cert-card" href="https://www.credly.com/badges/34290137-6a87-4c70-9b15-d420ca805b49" target="_blank" rel="noopener noreferrer"><div class="cert-icon">✓</div><div class="cert-text"><strong>S/4HANA Cloud — Sales 2021</strong>SAP Certified Application Associate</div></a>
+      <a class="cert-card" href="https://www.credly.com/badges/ecb75cdb-8274-49a8-b428-237414cb623a" target="_blank" rel="noopener noreferrer"><div class="cert-icon">✓</div><div class="cert-text"><strong>Extended Warehouse Management 9.5</strong>SAP Certified Application Associate</div></a>
+      <a class="cert-card" href="https://www.credly.com/badges/cc0bf3fa-114f-4e1f-a00b-934fe0fd2ba8" target="_blank" rel="noopener noreferrer"><div class="cert-icon">✓</div><div class="cert-text"><strong>Transportation Management 9.5</strong>SAP Certified Application Associate</div></a>
+      <a class="cert-card" href="https://www.credly.com/badges/c300df45-fca4-4c6f-930f-ae9638ed2cfc" target="_blank" rel="noopener noreferrer"><div class="cert-icon">✓</div><div class="cert-text"><strong>Fiori Application Developer</strong>SAP Certified Development Associate</div></a>
+      <a class="cert-card" href="https://www.credly.com/badges/896d8722-cc35-483d-8daf-4c7a6b3a5be3" target="_blank" rel="noopener noreferrer"><div class="cert-icon">✓</div><div class="cert-text"><strong>ABAP for SAP HANA 2.0</strong>SAP Certified Development Specialist</div></a>
     </div>
   </section>
 
@@ -528,7 +531,7 @@ See LICENSE for terms.
       </div>
       <div class="footer-block">
         <h3>Education</h3>
-        <p class="meta-line">B.E., Electronics &amp; Communication — MITS, Gwalior</p>
+        <p class="meta-line">B.E., Electronics &amp; Communication — <a href="https://web.mitsgwalior.in/" target="_blank" rel="noopener noreferrer">MITS, Gwalior</a></p>
         <p class="meta-line">2011 – 2015 · First Class (Hons), CGPA 8.36</p>
         <h3 style="margin-top:26px">Languages</h3>
         <div class="lang-row">

@@ -291,15 +291,14 @@ See LICENSE for terms.
   .job-card li strong{color:var(--ink); font-weight:700;}
   .job-card li::marker{color:var(--gold);}
 
-  /* ===== Sakura — recolored to match the app's own theme-light palette,
-     so this card, the social card, the app icon, and the app itself all
-     share the same visual identity (bg #f8f8f6, fg #3d3929, accent #c2553d) ===== */
+  /* ===== Sakura — portfolio's own green/gold palette (matches the rest of the
+     page), but using the real flower mark shape instead of the 🌸 emoji so it
+     still nods to the app's actual brand shape, just recolored to fit here ===== */
   .sakura-card{
-    background:#f8f8f6;
-    border:1px solid #e3e0d8;
+    background:radial-gradient(circle at 82% 8%, rgba(201,138,44,0.22), transparent 42%), linear-gradient(155deg, var(--green-deep), var(--green) 70%);
     border-radius:var(--radius);
     padding:40px 38px;
-    color:#3d3929;
+    color:var(--white);
     position:relative;
     overflow:hidden;
     box-shadow:0 14px 36px var(--shadow-lg);
@@ -307,24 +306,24 @@ See LICENSE for terms.
   .sakura-card::before{
     content:'';
     position:absolute; right:20px; top:10px;
-    width:150px; height:150px; opacity:0.9;
-    background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72"><g opacity="0.9"><ellipse cx="36" cy="18" rx="9" ry="9" fill="rgba(194,85,61,0.38)" stroke="rgba(194,85,61,0.55)" stroke-width="1"/><ellipse cx="18" cy="30" rx="9" ry="9" fill="rgba(194,85,61,0.30)" stroke="rgba(194,85,61,0.45)" stroke-width="1"/><ellipse cx="54" cy="30" rx="9" ry="9" fill="rgba(194,85,61,0.30)" stroke="rgba(194,85,61,0.45)" stroke-width="1"/><ellipse cx="24" cy="46" rx="9" ry="9" fill="rgba(194,85,61,0.22)" stroke="rgba(194,85,61,0.38)" stroke-width="1"/><ellipse cx="48" cy="46" rx="9" ry="9" fill="rgba(194,85,61,0.22)" stroke="rgba(194,85,61,0.38)" stroke-width="1"/><circle cx="36" cy="32" r="5.5" fill="rgba(194,85,61,0.18)" stroke="rgba(194,85,61,0.48)" stroke-width="1.2"/></g></svg>');
+    width:150px; height:150px; opacity:0.16;
+    background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72"><g><ellipse cx="36" cy="18" rx="9" ry="9" fill="%23F6E6C8" fill-opacity="0.55"/><ellipse cx="18" cy="30" rx="9" ry="9" fill="%23F6E6C8" fill-opacity="0.72"/><ellipse cx="54" cy="30" rx="9" ry="9" fill="%23F6E6C8" fill-opacity="0.72"/><ellipse cx="24" cy="46" rx="9" ry="9" fill="%23E0B25E" fill-opacity="0.85"/><ellipse cx="48" cy="46" rx="9" ry="9" fill="%23E0B25E" fill-opacity="0.85"/><circle cx="36" cy="32" r="6" fill="%23C98A2C"/></g></svg>');
     background-size:contain; background-repeat:no-repeat;
   }
   .sakura-eyebrow{
     display:inline-block;
     font-family:var(--font-mono); font-size:12px; font-weight:500;
-    color:#c2553d;
-    background:rgba(194,85,61,0.10);
+    color:var(--gold-tint);
+    background:rgba(255,255,255,0.12);
     padding:5px 12px; border-radius:999px;
     margin:0 0 16px;
   }
   .sakura-title{
     font-family:var(--font-display); font-weight:600; font-size:28px;
-    margin:0 0 10px; position:relative; color:#3d3929;
+    margin:0 0 10px; position:relative;
   }
   .sakura-desc{
-    color:#73716b;
+    color:rgba(255,253,249,0.86);
     max-width:58ch; margin:0 0 26px; font-size:16px; position:relative;
   }
   .sakura-facts{
@@ -333,24 +332,24 @@ See LICENSE for terms.
   }
   .fact-num{
     font-family:var(--font-display); font-weight:700; font-size:26px;
-    color:#c2553d; display:block; margin-bottom:2px;
+    color:var(--gold-tint); display:block; margin-bottom:2px;
   }
-  .fact-label{font-family:var(--font-mono); font-size:12px; color:#73716b;}
+  .fact-label{font-family:var(--font-mono); font-size:12px; color:rgba(255,253,249,0.72);}
   .quote{
     font-family:var(--font-display); font-weight:500; font-style:italic;
-    font-size:19px; color:#3d3929;
-    border-left:3px solid #c2553d;
+    font-size:19px; color:var(--white);
+    border-left:3px solid var(--gold);
     padding-left:18px; margin:0 0 28px; position:relative;
   }
   .quote span{
     display:block; font-family:var(--font-mono); font-style:normal;
-    font-size:11.5px; color:#73716b; margin-top:8px;
+    font-size:11.5px; color:rgba(255,253,249,0.66); margin-top:8px;
   }
   .sakura-card .btn{position:relative;}
-  .sakura-card .btn.primary{background:#c2553d; border-color:#c2553d; color:#f8f8f6;}
-  .sakura-card .btn.primary:hover{background:#a8452f; border-color:#a8452f;}
-  .sakura-card .btn:not(.primary){background:rgba(61,57,41,0.06); border-color:#e3e0d8; color:#3d3929; box-shadow:none;}
-  .sakura-card .btn:not(.primary):hover{background:rgba(61,57,41,0.12);}
+  .sakura-card .btn.primary{background:var(--gold); border-color:var(--gold); color:var(--green-deep);}
+  .sakura-card .btn.primary:hover{background:#DDA043; border-color:#DDA043;}
+  .sakura-card .btn:not(.primary){background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.28); color:var(--white); box-shadow:none;}
+  .sakura-card .btn:not(.primary):hover{background:rgba(255,255,255,0.16);}
 
   /* ===== Skills ===== */
   .chip-row{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:44px;}
@@ -531,7 +530,7 @@ See LICENSE for terms.
       <h2>Building Sakura</h2>
     </div>
     <div class="sakura-card">
-      <span class="sakura-eyebrow"><svg width="13" height="13" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:-2px;margin-right:5px" aria-hidden="true"><g opacity="0.9"><ellipse cx="36" cy="18" rx="9" ry="9" fill="rgba(194,85,61,0.38)" stroke="rgba(194,85,61,0.55)" stroke-width="1.4"/><ellipse cx="18" cy="30" rx="9" ry="9" fill="rgba(194,85,61,0.30)" stroke="rgba(194,85,61,0.45)" stroke-width="1.4"/><ellipse cx="54" cy="30" rx="9" ry="9" fill="rgba(194,85,61,0.30)" stroke="rgba(194,85,61,0.45)" stroke-width="1.4"/><ellipse cx="24" cy="46" rx="9" ry="9" fill="rgba(194,85,61,0.22)" stroke="rgba(194,85,61,0.38)" stroke-width="1.4"/><ellipse cx="48" cy="46" rx="9" ry="9" fill="rgba(194,85,61,0.22)" stroke="rgba(194,85,61,0.38)" stroke-width="1.4"/><circle cx="36" cy="32" r="5.5" fill="rgba(194,85,61,0.18)" stroke="rgba(194,85,61,0.48)" stroke-width="1.6"/></g></svg>Personal project</span>
+      <span class="sakura-eyebrow"><svg width="13" height="13" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:-2px;margin-right:5px" aria-hidden="true"><g opacity="0.95"><ellipse cx="36" cy="18" rx="9" ry="9" fill="rgba(246,230,200,0.55)" stroke="rgba(246,230,200,0.8)" stroke-width="1.4"/><ellipse cx="18" cy="30" rx="9" ry="9" fill="rgba(246,230,200,0.42)" stroke="rgba(246,230,200,0.7)" stroke-width="1.4"/><ellipse cx="54" cy="30" rx="9" ry="9" fill="rgba(246,230,200,0.42)" stroke="rgba(246,230,200,0.7)" stroke-width="1.4"/><ellipse cx="24" cy="46" rx="9" ry="9" fill="rgba(246,230,200,0.30)" stroke="rgba(246,230,200,0.55)" stroke-width="1.4"/><ellipse cx="48" cy="46" rx="9" ry="9" fill="rgba(246,230,200,0.30)" stroke="rgba(246,230,200,0.55)" stroke-width="1.4"/><circle cx="36" cy="32" r="5.5" fill="rgba(246,230,200,0.25)" stroke="rgba(246,230,200,0.75)" stroke-width="1.6"/></g></svg>Personal project</span>
       <p class="sakura-title">Sakura</p>
       <p class="sakura-desc">
         A single-file workspace that replaces five separate tools — outliner, meeting notes,

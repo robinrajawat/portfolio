@@ -385,6 +385,9 @@ See LICENSE for terms.
   .project-list li{margin-bottom:8px; line-height:1.6;}
   .project-list li strong{color:var(--ink); font-weight:700;}
   .project-list li::marker{color:var(--gold);}
+  .sakura-card .project-list{color:rgba(255,253,249,0.86); position:relative;}
+  .sakura-card .project-list li strong{color:var(--white);}
+  .sakura-card .project-list li::marker{color:var(--gold-tint);}
 
   .card-icon-row{display:flex; align-items:center; gap:14px; margin:0 0 10px;}
   .card-icon{width:44px; height:44px; border-radius:11px; flex-shrink:0; box-shadow:0 3px 10px rgba(0,0,0,0.18);}
@@ -659,8 +662,9 @@ See LICENSE for terms.
         <li><strong>AI, bring your own key:</strong> rewrite, outlines, and action-item
           extraction across seven providers, restricted by an allowlisted CSP so nothing
           calls out anywhere else.</li>
-        <li><strong>No account required:</strong> works fully offline, local to your
-          browser; optional sign-in syncs across devices.</li>
+        <li><strong>Cloud sync, optional:</strong> works fully offline, local to your
+          browser, with no account needed. Sign in with Google or email/password via
+          Firebase Authentication and your notes sync to Firestore across devices.</li>
       </ul>
       <div class="sakura-facts">
         <div><span class="fact-num">33 days</span><span class="fact-label">EVENINGS &amp; WEEKENDS, WITH CLAUDE</span></div>
@@ -686,9 +690,10 @@ See LICENSE for terms.
         and undo, all from the field on a phone.
       </p>
       <ul class="project-list">
-        <li><strong>Offline-first:</strong> a local write queue keeps scoring working with
-          no signal and syncs once you're back online; optional sign-in syncs matches,
-          teams, and clubs across devices.</li>
+        <li><strong>Offline-first, cloud sync optional:</strong> a local write queue keeps
+          scoring working with no signal and syncs once you're back online. Sign in with
+          Google or email/password via Firebase Authentication and matches, teams, and
+          clubs sync across devices through Firestore.</li>
         <li><strong>Sharing split by permission:</strong> a scoring-access code for
           teammates, a separate read-only link for anyone just following live — plus club
           rosters, round-robin/knockout tournaments, and net-run-rate standings.</li>

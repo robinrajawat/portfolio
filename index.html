@@ -358,6 +358,24 @@ See LICENSE for terms.
   .sakura-card .btn:not(.primary){background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.28); color:var(--white); box-shadow:none;}
   .sakura-card .btn:not(.primary):hover{background:rgba(255,255,255,0.16);}
 
+  .side-project{
+    margin-top:16px;
+    display:flex; align-items:center; justify-content:space-between; gap:20px;
+    background:var(--surface);
+    border:1px solid var(--paper-3);
+    border-radius:var(--radius-sm);
+    padding:18px 22px;
+    box-shadow:0 4px 14px var(--shadow);
+  }
+  .side-project-title{
+    font-family:var(--font-display); font-weight:600; font-size:17px;
+    margin:0 0 3px; color:var(--ink);
+  }
+  .side-project-desc{font-size:14px; color:var(--ink-soft); margin:0;}
+  @media (max-width:520px){
+    .side-project{flex-direction:column; align-items:flex-start;}
+  }
+
   /* ===== Skills ===== */
   .chip-row{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:44px;}
   .chip{
@@ -573,6 +591,14 @@ See LICENSE for terms.
         <a class="btn primary" href="https://www.sakura-notes.com" target="_blank" rel="noopener noreferrer">Open Sakura</a>
         <a class="btn" href="https://github.com/robinrajawat/sakura" target="_blank" rel="noopener noreferrer">View source</a>
       </div>
+    </div>
+
+    <div class="side-project">
+      <div class="side-project-text">
+        <p class="side-project-title">Club Scorer</p>
+        <p class="side-project-desc">Ball-by-ball cricket scoring for friendly club games.</p>
+      </div>
+      <a class="btn" href="https://www.clubscorer.com" target="_blank" rel="noopener noreferrer">Open</a>
     </div>
   </section>
 

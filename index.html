@@ -358,23 +358,33 @@ See LICENSE for terms.
   .sakura-card .btn:not(.primary){background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.28); color:var(--white); box-shadow:none;}
   .sakura-card .btn:not(.primary):hover{background:rgba(255,255,255,0.16);}
 
-  .side-project{
-    margin-top:16px;
-    display:flex; align-items:center; justify-content:space-between; gap:20px;
+  .project-card{
     background:var(--surface);
     border:1px solid var(--paper-3);
-    border-radius:var(--radius-sm);
-    padding:18px 22px;
-    box-shadow:0 4px 14px var(--shadow);
+    border-radius:var(--radius);
+    padding:36px 38px;
+    margin-top:20px;
+    box-shadow:0 10px 28px var(--shadow);
   }
-  .side-project-title{
-    font-family:var(--font-display); font-weight:600; font-size:17px;
-    margin:0 0 3px; color:var(--ink);
+  .project-eyebrow{
+    display:inline-block;
+    font-family:var(--font-mono); font-size:12px; font-weight:500;
+    color:var(--gold-text);
+    background:var(--gold-tint);
+    padding:5px 12px; border-radius:999px;
+    margin:0 0 16px;
   }
-  .side-project-desc{font-size:14px; color:var(--ink-soft); margin:0;}
-  @media (max-width:520px){
-    .side-project{flex-direction:column; align-items:flex-start;}
+  .project-title{
+    font-family:var(--font-display); font-weight:600; font-size:26px;
+    margin:0 0 10px; color:var(--ink);
   }
+  .project-desc{
+    color:var(--ink-soft); max-width:62ch; margin:0 0 18px; font-size:15.5px;
+  }
+  .project-list{margin:0 0 24px; padding-left:20px; color:var(--ink-soft);}
+  .project-list li{margin-bottom:8px; line-height:1.6;}
+  .project-list li strong{color:var(--ink); font-weight:700;}
+  .project-list li::marker{color:var(--gold);}
 
   /* ===== Skills ===== */
   .chip-row{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:44px;}
@@ -593,12 +603,31 @@ See LICENSE for terms.
       </div>
     </div>
 
-    <div class="side-project">
-      <div class="side-project-text">
-        <p class="side-project-title">Club Scorer</p>
-        <p class="side-project-desc">Ball-by-ball cricket scoring for friendly club games.</p>
+    <div class="project-card">
+      <span class="project-eyebrow">Personal project</span>
+      <p class="project-title">Club Scorer</p>
+      <p class="project-desc">
+        A single-file, zero-build progressive web app for ball-by-ball cricket scoring at
+        club and social games — runs, wides, no-balls, byes, every dismissal type, bowler
+        rotation, and undo, all from the field on a phone.
+      </p>
+      <ul class="project-list">
+        <li><strong>Zero-build architecture:</strong> React and Firebase loaded via CDN
+          script tags into a single index.html — no bundler, no install step.</li>
+        <li><strong>Offline-first:</strong> a service worker keeps scoring working with no
+          signal, queuing writes locally and syncing once back online.</li>
+        <li><strong>Live sharing, split by permission:</strong> a scoring-access code for
+          teammates scoring alongside you, and a separate read-only link for anyone
+          following the score live — deliberately two different codes, not one link with
+          hidden write access.</li>
+        <li><strong>Clubs, federations, and tournaments:</strong> shared team rosters,
+          round-robin and knockout tournament generation, points tables with net run rate,
+          and a cross-club player directory for borrowing players onto a roster.</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn primary" href="https://www.clubscorer.com" target="_blank" rel="noopener noreferrer">Open Club Scorer</a>
+        <a class="btn" href="https://github.com/robinrajawat/cricket-scorer" target="_blank" rel="noopener noreferrer">View source</a>
       </div>
-      <a class="btn" href="https://www.clubscorer.com" target="_blank" rel="noopener noreferrer">Open</a>
     </div>
   </section>
 

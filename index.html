@@ -377,9 +377,12 @@ See LICENSE for terms.
   .sakura-card .project-list li strong{color:var(--white);}
   .sakura-card .project-list li::marker{color:var(--gold-tint);}
 
-  .card-icon-row{display:flex; align-items:center; gap:14px; margin:0 0 10px;}
+  .card-icon-row{display:flex; align-items:center; gap:14px; margin:0 0 6px;}
   .card-icon{width:44px; height:44px; border-radius:11px; flex-shrink:0; box-shadow:0 3px 10px rgba(0,0,0,0.18);}
   .card-icon-row .sakura-title, .card-icon-row .project-title{margin:0;}
+  .card-subtitle{font-size:13.5px; margin:0 0 16px; font-family:var(--font-mono);}
+  .sakura-card .card-subtitle{color:rgba(255,253,249,0.66);}
+  .project-card .card-subtitle{color:var(--ink-soft);}
 
   /* ===== Skills ===== */
   .chip-row{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:44px;}
@@ -641,6 +644,7 @@ See LICENSE for terms.
         <img class="card-icon" src="icons/sakura-icon-192.png" alt="" />
         <p class="sakura-title">Sakura</p>
       </div>
+      <p class="card-subtitle">Built for architecture &amp; consulting work — used daily in my own practice and shared with colleagues</p>
       <p class="sakura-desc">
         A single-file workspace for outlining, a decision log, mind maps, and architecture
         diagrams — linked to each other, not just co-located, so a note, a decision, and a
@@ -674,6 +678,7 @@ See LICENSE for terms.
         <img class="card-icon" src="icons/clubscorer-icon-192.png" alt="" />
         <p class="project-title">Club Scorer</p>
       </div>
+      <p class="card-subtitle">Built for the club cricket community — free for any team or player</p>
       <p class="project-desc">
         A single-file, zero-build progressive web app for ball-by-ball cricket scoring at
         club and social games — runs, wides, no-balls, byes, dismissals, bowler rotation,

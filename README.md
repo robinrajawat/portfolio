@@ -2,7 +2,7 @@
 
 Personal portfolio and resume site, built as a single static HTML file.
 
-**Live site:** [robinrajawat.github.io/portfolio](https://robinrajawat.github.io/portfolio/)
+**Live site:** [robinrajawat.com](https://robinrajawat.com/)
 
 ## About
 

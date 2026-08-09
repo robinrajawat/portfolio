@@ -160,7 +160,35 @@ See LICENSE for terms.
   .navlinks{display:flex; gap:26px; font-size:14px; font-weight:600;}
   .navlinks a{text-decoration:none; color:var(--ink-soft); transition:color 0.2s ease;}
   .navlinks a:hover{color:var(--green);}
-  @media (max-width:640px){ .navlinks{display:none} }
+
+  .navtoggle{display:none;}
+  .navtoggle-label{
+    display:none; cursor:pointer; padding:6px; margin:-6px;
+    flex-direction:column; gap:5px; width:22px;
+  }
+  .navtoggle-label span{
+    display:block; height:2px; width:100%; background:var(--ink);
+    border-radius:2px; transition:transform 0.2s ease, opacity 0.2s ease;
+  }
+  .navdrop{
+    display:none; flex-direction:column; gap:2px;
+    max-width:960px; margin:0 auto; padding:0 28px 18px;
+    font-size:14.5px; font-weight:600;
+  }
+  .navdrop a{
+    text-decoration:none; color:var(--ink-soft); padding:10px 4px;
+    border-top:1px solid var(--paper-3); transition:color 0.2s ease;
+  }
+  .navdrop a:hover{color:var(--green);}
+
+  @media (max-width:640px){
+    .navlinks{display:none}
+    .navtoggle-label{display:flex}
+    .navtoggle:checked ~ .navdrop{display:flex}
+    .navtoggle:checked ~ .topnav-inner .navtoggle-label span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .navtoggle:checked ~ .topnav-inner .navtoggle-label span:nth-child(2){opacity:0;}
+    .navtoggle:checked ~ .topnav-inner .navtoggle-label span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  }
 
   /* ===== Hero ===== */
   .hero{
@@ -441,6 +469,7 @@ See LICENSE for terms.
 <body>
 
 <nav class="topnav">
+  <input type="checkbox" id="navtoggle" class="navtoggle">
   <div class="topnav-inner">
     <a class="brand" href="#top">Robin Singh Rajawat</a>
     <div class="navlinks">
@@ -449,6 +478,15 @@ See LICENSE for terms.
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </div>
+    <label for="navtoggle" class="navtoggle-label" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </label>
+  </div>
+  <div class="navdrop">
+    <a href="#experience">Experience</a>
+    <a href="#sakura">Outside SAP</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 

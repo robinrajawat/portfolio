@@ -773,5 +773,13 @@ See LICENSE for terms.
   </div>
 </footer>
 
+<script>
+  document.querySelectorAll('.navdrop a').forEach(function(a){
+    a.addEventListener('click', function(){
+      document.getElementById('navtoggle').checked = false;
+    });
+  });
+</script>
+
 </body>
 </html>

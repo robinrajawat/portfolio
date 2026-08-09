@@ -161,7 +161,13 @@ See LICENSE for terms.
   .navlinks a{text-decoration:none; color:var(--ink-soft); transition:color 0.2s ease;}
   .navlinks a:hover{color:var(--green);}
 
-  .navtoggle{display:none;}
+  .navtoggle{
+    position:absolute; opacity:0; width:1px; height:1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap;
+  }
+  .navtoggle:focus-visible ~ .topnav-inner .navtoggle-label{
+    outline:2px solid var(--green); outline-offset:3px; border-radius:4px;
+  }
   .navtoggle-label{
     display:none; cursor:pointer; padding:6px; margin:-6px;
     flex-direction:column; gap:5px; width:22px;

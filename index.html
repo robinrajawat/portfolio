@@ -475,7 +475,7 @@ See LICENSE for terms.
 <body>
 
 <nav class="topnav">
-  <input type="checkbox" id="navtoggle" class="navtoggle">
+  <input type="checkbox" id="navtoggle" class="navtoggle" aria-label="Toggle navigation menu">
   <div class="topnav-inner">
     <a class="brand" href="#top">Robin Singh Rajawat</a>
     <div class="navlinks">
@@ -484,7 +484,7 @@ See LICENSE for terms.
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </div>
-    <label for="navtoggle" class="navtoggle-label" aria-label="Toggle navigation menu">
+    <label for="navtoggle" class="navtoggle-label" aria-hidden="true">
       <span></span><span></span><span></span>
     </label>
   </div>
@@ -778,6 +778,15 @@ See LICENSE for terms.
     a.addEventListener('click', function(){
       document.getElementById('navtoggle').checked = false;
     });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      var toggle = document.getElementById('navtoggle');
+      if(toggle.checked){
+        toggle.checked = false;
+        toggle.focus();
+      }
+    }
   });
 </script>
 
